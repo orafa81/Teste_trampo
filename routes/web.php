@@ -20,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-
+Route::get('/env-test', function () {
+    return response()->json([
+        'APP_KEY' => env('APP_KEY'),
+        'PUSHER_HOST' => env('PUSHER_HOST'),
+        'DATABASE_URL' => env('DATABASE_URL'),
+    ]);
+});
 
 Route::get('/dashboard', function () {
     if (Gate::allows('isEmpresa')) {
