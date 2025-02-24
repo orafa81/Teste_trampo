@@ -10,7 +10,7 @@
     <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('js/filtro.js') }}"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
